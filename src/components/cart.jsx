@@ -58,8 +58,10 @@ const Cart = ({ open, setOpen }) => {
         if (cartItem.selected) {
           return cartItem.price * cartItem.count;
         }
+        return 0;
       })
       .reduce((a, b) => a + b, 0) / 100 || 0;
+
   const COUNT = cartItems.filter((item) => item.selected === true).length;
 
   return (
